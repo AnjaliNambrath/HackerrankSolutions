@@ -1,0 +1,30 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+       int t;
+       Scanner in = new Scanner(System.in);
+       t=in.nextInt();
+       for(int i=0;i<t;i++){
+           int b=0,w=0,tot=0;
+           int n=in.nextInt();
+           int c=in.nextInt();
+           int m=in.nextInt();
+            b=n/c;
+           tot=b;
+           while(b>=m){
+               w=b%m;
+               b=b/m;
+               tot=tot+b;
+               b=b+w;              
+           }
+            System.out.println(tot);
+       }
+    }
+}

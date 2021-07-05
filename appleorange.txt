@@ -1,0 +1,44 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        int s=in.nextInt();
+        int t=in.nextInt();
+        int a=in.nextInt();
+        int b=in.nextInt();
+        int m=in.nextInt();
+        int n=in.nextInt();
+        int apple=0;
+        for(int i=0;i<m;i++)
+        {
+            int appd=in.nextInt();
+            appd=appd+a;
+            if(appd>=s && appd<=t)
+                {
+                    apple++;
+                }
+        }
+        System.out.println(apple);
+        int orange=0;
+        for(int i=0;i<n;i++)
+        {    
+            int od=in.nextInt();
+            od=od+b;
+            if(od>=s&&od<=t)
+                {
+                    orange++;
+                }
+        }
+        System.out.println(orange);
+    
+    in.close();
+    }
+}

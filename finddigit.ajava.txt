@@ -1,0 +1,27 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+       Scanner in = new Scanner(System.in);
+       int t = in.nextInt();
+       for(int j=0;j<t;j++){
+           int c=0;
+           int num = in.nextInt();
+           int i = num;
+           while(i!=0){
+               int rem = i % 10;
+               if((rem!=0) && (num % rem == 0)){
+                   c++;
+               }
+               i = i/10;
+           }
+           System.out.println(c);
+       }
+    }
+}
